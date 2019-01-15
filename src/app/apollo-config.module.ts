@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Apollo, ApolloModule } from 'apollo-angular'
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
+import { environment } from '../environments/environment';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ export class ApolloConfigModule {
 
         apollo.create({
             link: http,
-            cache: new InMemoryCache()
+            cache: new InMemoryCache(),
+            connectToDevTools: !environment.production
 
         })
 

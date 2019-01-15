@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(
     private apollo: Apollo
   ) {
-    this.createUser()
+    //this.createUser()
     this.allUsers();
   }
 
@@ -44,11 +44,11 @@ export class AppComponent {
           }
         }
     `,
-    variables: {
-      name: 'Iron Man',
-      email: 'iron@avengers.com',
-      password: '123456'
-    }
+      variables: {
+        name: 'Fulano',
+        email: 'fulano@faleconosco.com',
+        password: '123456'
+      }
     }).subscribe(res => console.log('Mutation: ', res));
 
   }
