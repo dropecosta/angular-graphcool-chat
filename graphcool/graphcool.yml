@@ -61,7 +61,7 @@ permissions:
   - operation: User.delete
     authenticated: true
 
-  #Chat
+  # Chat
   - operation: Chat.read
     authenticated: true
   - operation: Chat.create
@@ -71,7 +71,7 @@ permissions:
   - operation: Chat.delete
     authenticated: true
 
-  #Message
+  # Message
   - operation: Message.read
     authenticated: true
   - operation: Message.create
@@ -81,7 +81,7 @@ permissions:
   - operation: Message.delete
     authenticated: true
 
-  #File
+  # File
   - operation: File.read
     authenticated: true
   - operation: File.create
@@ -89,6 +89,28 @@ permissions:
   - operation: File.update
     authenticated: true
   - operation: File.delete
+    authenticated: true
+
+  # Relations
+  - operation: UsersOnChats.connect
+    authenticated: true
+  - operation: UsersOnChats.disconnect
+    authenticated: true
+
+  - operation: MessagesOnChat.connect
+    authenticated: true
+
+  - operation: MessagesOnUser.connect
+    authenticated: true
+
+  - operation: UserPhoto.connect
+    authenticated: true
+  - operation: UserPhoto.disconnect
+    authenticated: true
+
+  - operation: ChatPhoto.connect
+    authenticated: true
+  - operation: ChatPhoto.disconnect
     authenticated: true
 
 
